@@ -1,10 +1,10 @@
 body {
-    background-color: #f2e9e4;
+    background-color: white;
     overflow-x: hidden;
 }
 
 header {
-    background-color: #4a4e69;
+    background-color: #1e90ff;
     color: white;
     font-size: 2.5vw;
 }
@@ -21,14 +21,14 @@ header {
     margin-left: 20px;
     margin-top: 10px;
     height: 20vw;
-    background-color: #c9ada7;
+    background-color: #90ee90;
 }
 
 .five-day div {
     position: relative;
     height: 300px;
     width: 12.5%;
-    background-color: #9a8c98;
+    background-color: #90ee90;
     left: 27.5%;
     border: 2px solid black;
 }
