@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <title>Weather!</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Righteous&family=Roboto+Mono&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <!-- regular css -->
+    <link rel="stylesheet" href="./assets/stylesheet.css" />
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
-    <header class="container-fluid text-center text-white bg-dark p-2 weather-header">
-        <h1>weather dashboard</h1>
-    </header>
-    <div class="card">
-        <form class="search" id="search-form">
-            <input type="text" id="search-bar" class="search-bar">
-            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M333.78 20.188c-39.97 0-79.96 15.212-110.405 45.656-58.667 58.667-60.796 152.72-6.406 213.97l-15.782 15.748 13.25 13.25 15.75-15.78c61.248 54.39 155.3 52.26 213.968-6.407 60.887-60.886 60.888-159.894 0-220.78C413.713 35.4 373.753 20.187 333.78 20.187zm0 18.562c35.15 0 70.285 13.44 97.158 40.313 53.745 53.745 53.744 140.6 0 194.343-51.526 51.526-133.46 53.643-187.5 6.375l.218-.217c-2.35-2.05-4.668-4.17-6.906-6.407-2.207-2.206-4.288-4.496-6.313-6.812l-.218.22c-47.27-54.04-45.152-135.976 6.374-187.502C263.467 52.19 298.63 38.75 333.78 38.75zm0 18.813c-30.31 0-60.63 11.6-83.81 34.78-46.362 46.362-46.362 121.234 0 167.594 10.14 10.142 21.632 18.077 33.905 23.782-24.91-19.087-40.97-49.133-40.97-82.94 0-15.323 3.292-29.888 9.22-43-4.165 20.485.44 40.88 14.47 54.907 24.583 24.585 68.744 20.318 98.624-9.562 29.88-29.88 34.146-74.04 9.56-98.625-2.375-2.376-4.943-4.473-7.655-6.313 45.13 8.648 79.954 46.345 84.25 92.876 4.44-35.07-6.82-71.726-33.813-98.72-23.18-23.18-53.47-34.78-83.78-34.78zM176.907 297.688L42.094 432.5l34.562 34.563L211.47 332.25l-34.564-34.563zM40 456.813L24 472.78 37.22 486l15.968-16L40 456.812z"></path></svg></button>
+
+    <header id="main-text" class="navbar-text w-95 d-flex justify-content-center">Weather Dashboard</header>
+
+    <section class="row">
+        <!-- section with main search form -->
+        <form id="searchForm" class="col-3 main-form ml-3">
+            <h2 id="search-text" class="mb-0 mt-3 mr-3">Search For a City:</h2>
+            <input id="searchFormInput" class="mb-3 mr-3 mt-2 w-100" type="text" placeholder="Enter A City Here">
+            <button id="search-btn" class="btn btn-primary d-block w-100 mt-0 mr-3 mb-4">Search</button>
         </form>
-        <div id="history">
-            
-        </div>
-        <div class="weather">
-            <h2 class="city">weather in portland</h2>
-            <h1 class="temp">51°</div>
-            <img src="" alt="" class="icon"/>
-            <div class="description">Cloudy</div>
-            <div class="humidity">Humidity:75%</div>
-            <div class="wind">Wind speeds:20mph</div>
-            <div class="uv">UV Rays: 65spf</div>
-        </div>
-        <div>
-            <section 
-            id="today"
-            role="region"
-            >
 
-            </section>
-            <section
-            id="forecast"
-            role="region">
+        <!-- current day section -->
+        <section id="currentCity" class="current-day col-8">
 
-            </section>
+        </section>
+
+    </section>
+
+    <h2 id="main-text" class="mt-2 section-header">5 Day Forecast</h2>
+
+
+    <section class="row five-day">
+
+        <div id="0" class="mr-3 mt-3 mb-3">
+            <img id="0">
         </div>
-    </div>
-    <script src="./assets/script.js"></script>
+        <div id="1" class="mr-3 mt-3 mb-3">
+            <img id="1">
+        </div>
+        <div id="2" class="mr-3 mt-3 mb-3">
+            <img id="2">
+        </div>
+        <div id="3" class="mr-3 mt-3 mb-3">
+            <img id="3">
+        </div>
+        <div id="4" class="mt-3 mb-3">
+            <img id="4">
+        </div>
+
+    </section>
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- regular js -->
+    <script src="./assets/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
 </body>
+
 </html>
